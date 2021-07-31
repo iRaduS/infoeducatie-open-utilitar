@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "boardgame.io": "^0.45.2",
+    "boardgame.io": "^0.39.16",
+    "esm": "^3.2.25",
     "koa-static": "^5.0.0",
-    "nanoid": "^3.1.23"
+    "nanoid": "^3.1.23",
+    "node-persist": "^3.1.0"
   }
 }
