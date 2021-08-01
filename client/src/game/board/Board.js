@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { Players, SelfEntity, BottomBar, AnnouncementArea } from "../components";
+import { Players, SelfEntity, BottomBar, AnnouncementArea, ChatBox } from "../components";
 import "./board.css";
 
 const Board = (props) => {
-  // player 0 has to set the player's actual screen names due to the way boardgame.io works
   useEffect(() => {
     if (props.playerID === "0") {
       props.moves.changeNames(props.gameMetadata);
@@ -22,7 +21,9 @@ const Board = (props) => {
           <AnnouncementArea {...props} />
           <BottomBar {...props} />
         </div>
-
+        <div className="cls-col">
+          <ChatBox {...props} />
+        </div>
       </div>
     </div>
   );
